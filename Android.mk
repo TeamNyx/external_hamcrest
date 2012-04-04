@@ -24,3 +24,16 @@ LOCAL_MODULE := hamcrest-host
 LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_HOST_JAVA_LIBRARY)
+
+#-------------------------------
+# build a target jar
+
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := $(call all-java-files-under, src)
+
+LOCAL_MODULE := hamcrest
+
+LOCAL_MODULE_TAGS := optional
+
+include $(BUILD_STATIC_JAVA_LIBRARY)
